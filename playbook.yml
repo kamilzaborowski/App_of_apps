@@ -1,0 +1,10 @@
+---
+-
+  name: Deploy application
+  hosts: all
+  become: true
+  vars:
+    deployment_path: "/home/ubuntu/app"
+    compose_path: "./docker-compose.yml"
+  roles:
+  - geerlingguy.docker
