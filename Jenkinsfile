@@ -1,7 +1,7 @@
 def backendDockerTag=""
 def frontendDockerTag=""
-def frontendImage="kamilzaborowski/frontend"
-def backendImage='kamilzaborowski/backend'
+def frontendImage="pandaacademy/frontend"
+def backendImage="pandaacademy/backend"
 def dockerRegistry=""
 def registryCredentials="dockerhub"
 
