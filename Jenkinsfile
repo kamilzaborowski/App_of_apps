@@ -61,15 +61,15 @@ pipeline {
             }
         }
 
-        stage('Run terraform') {
-            steps {
-                dir('Terraform') {
-                    git branch: 'main', url: 'https://github.com/kamilzaborowski/Terraform'
-                    withAWS(credentials:'AWS',region: 'us-east-1') {
-                        sh 'terraform init && terraform apply -auto-approve -var-file="terraform.tfvars"'
-                    }
-                }
-            }
-        }
+        //stage('Run terraform') {
+        //    steps {
+        //        dir('Terraform') {
+        //            git branch: 'main', url: 'https://github.com/kamilzaborowski/Terraform'
+        //            withAWS(credentials:'AWS',region: 'us-east-1') {
+        //                sh 'terraform init && terraform apply -auto-approve -var-file="terraform.tfvars"'
+        //            }
+        //        }
+        //    }
+        //}
     }
 }   
