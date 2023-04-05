@@ -83,12 +83,13 @@ pipeline {
             }
         }
     }
-}   
-post {
-    always {
-        withEnv(["FRONTEND_IMAGE=$frontendImage:$frontendDockerTag","BACKEND_IMAGE=$backendImage:$backendDockerTag"]) {
-            sh "docker-compose down"
-            cleanWs()
+
+    post {
+        always {
+            withEnv(["FRONTEND_IMAGE=$frontendImage:$frontendDockerTag","BACKEND_IMAGE=$backendImage:$backendDockerTag"]) {
+                sh "docker-compose down"
+                cleanWs()
+            }
         }
     }
-}
+}   
