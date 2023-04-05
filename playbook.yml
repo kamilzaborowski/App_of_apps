@@ -44,5 +44,5 @@
       build: yes
       debug: yes
     environment:
-      FRONTEND_IMAGE: "{{ lookup('env',FRONTEND_IMAGE') }}"
+      FRONTEND_IMAGE: "{{ lookup('env','FRONTEND_IMAGE') }}"
       BACKEND_IMAGE: "{{ lookup('env','BACKEND_IMAGE') }}"
